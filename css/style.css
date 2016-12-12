@@ -1,17 +1,36 @@
 body {
-  background-color: #1f2f3e;
-  color: #8d7255;
+  background-color: #002663;
+  color: white;
   text-align: center;
 }
 
 #heading {
   width: 800px;
   margin: 0 auto;
+  font-family: 'PT Sans Narrow', sans-serif;
+}
+
+h1    {
+  font-size: 50px;
+  margin-bottom: 0;
 }
 
 #heading h2 {
   display: inline;
-  padding: 15px;
+  padding: 5px;
+}
+
+button {
+  /*display: block;*/
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-left: 20px;
+  border-radius: 0;
+  color: #ffffff;
+  font-size: 15px;
+  background:#B22234;
+  padding: 10px 20px 10px 20px;
+
 }
 
 main {
@@ -31,18 +50,21 @@ ul {
 li {
   list-style-type: none;
   float: left;
-  border: 1px solid blue;
+  border: 1px solid #B22234;
   box-sizing: border-box;
 }
 
 .trump {
-  background: yellow;
+  background: url("file:///Users/almikola/development/WDI-Project-1/images/donaldTrump.jpg");
+  background-repeat: no-repeat;
 }
 
 .clinton {
-  background: red;
+  background: url("file:///Users/almikola/development/WDI-Project-1/images/hillaryClinton.jpg");
+  background-repeat: no-repeat;
 }
 
 .obama {
-  background: green;
+  background: url("file:///Users/almikola/development/WDI-Project-1/images/barackObama.jpg");
+  background-repeat: no-repeat;
 }
