@@ -1,3 +1,48 @@
 body {
-  background-color: #fff8ef;
+  background-color: #1f2f3e;
+  color: #8d7255;
+  text-align: center;
+}
+
+#heading {
+  width: 800px;
+  margin: 0 auto;
+}
+
+#heading h2 {
+  display: inline;
+  padding: 15px;
+}
+
+main {
+  margin: 0 auto;
+  margin-top: 25px;
+  width: 800px;
+  height: 600px;
+}
+
+ul {
+  margin: 0 auto;
+  padding: 0;
+  width: 800px;
+  height: 600px;
+}
+
+li {
+  list-style-type: none;
+  float: left;
+  border: 1px solid blue;
+  box-sizing: border-box;
+}
+
+.trump {
+  background: yellow;
+}
+
+.clinton {
+  background: red;
+}
+
+.obama {
+  background: blue;
 }

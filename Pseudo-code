@@ -1,0 +1,41 @@
+Whack - A - Trump
+
+need a picture of Donald Trump's face gaining points for every successful hit
+hit Hillary's face and you lose point, hit barack, you lose a life.
+
+each level points increase
+Create a grid using html with 4 by 4 squares using list items
+Set three different random classes - 1 for trump, 1 for hillary, 1 for obama
+Set a function that randomly picks.
+Start with 3 lives -
+-hit Obama, lose a life
+-four levels
+-at the end of four levels, each life converts into 50 points, and is added to final score (is this a good way to do it?)
+Use counter to increase score and lives
+
+Set timer to 30 seconds
+function 1 - trump
+  -add trump class
+  -set it so the class appears, then disappears for a second and then reappears
+  -listen for click
+    -if click appears, add 10 points to final score
+    -if click appears, randomise sound bite (optional)
+function 2 - hillary
+  -add hillary class
+  -set it so the class appears, then disappears for a second and then reappears (same at trump)
+  -listen for click
+    -if click appears, remove 10 points from final score
+function 3 - obama
+  -add obama class
+  -set it so the class appears, then disappears for a second and then reappears (same at trump)
+  -listen for click
+    -if click appears, remove 1 life
+function 4 - randomise which function to run
+
+
+JS
+create a 3 x 3 grid with a black circle over the middle with an image of trump and hillary on either side. (potentially wearing boxing gloves?)
+start a timer for 30 sec
+have images of trump come up in an increasing speed and listen for the click event to earn points
+have 4 levels that increase in speed and a different image for each level
+use trump sound bites that play after 2 or 3 click events
