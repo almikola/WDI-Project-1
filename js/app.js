@@ -15,14 +15,11 @@ Game.sequenceLengthObama        = 2;
 
 Game.start = function (){
   Game.score = document.getElementById('score');
-  Game.score.innerHTML = 'Score: ' + 0;
+  Game.score.innerHTML = 0;
   Game.lives = document.getElementById('lives');
-  Game.lives.innerHTML = 'Lives: '+ 3;
+  Game.lives.innerHTML = 3;
   Game.createGrid();
 };
-
-
-
 
 Game.createGrid = function () {
   var body = document.getElementsByTagName('main')[0];
@@ -37,8 +34,8 @@ Game.createGrid = function () {
   }
 
   Game.SequenceTrump();
-  // Game.SequenceClinton();
-  // Game.SequenceObama();
+  Game.SequenceClinton();
+  Game.SequenceObama();
 };
 
 // TRUMP
@@ -47,7 +44,6 @@ Game.SequenceTrump = function() {
   for (var i = 0; i < Game.sequenceLengthTrump; i++) {
     Game.sequenceT.push(Game.randomSequenceNumberTrump());
   }
-
   Game.trump();
 };
 
@@ -71,52 +67,75 @@ Game.pointsT = function(){
 };
 
 Game.earnPointsT = function () {
-
+  Game.score.innerHTML = parseInt(Game.score.innerHTML) + 10;
 };
 
-// // CLINTON
-//
-// Game.SequenceClinton = function() {
-//   for (var i = 0; i < Game.sequenceLengthClinton; i++) {
-//     Game.sequenceC.push(Game.randomSequenceNumberClinton());
-//   }
-//   console.log(Game.sequenceC);
-//   Game.clinton();
-// };
-//
-// Game.randomSequenceNumberClinton = function() {
-//   return Math.round(Math.random() * (Game.gridBase * Game.gridHeight));
-// };
-//
-// Game.clinton = function() {
-//   var squares = document.getElementsByTagName('li');
-//   for (var i = 0; i < Game.sequenceC.length; i++) {
-//     squares[Game.sequenceC[i]].className = 'clinton';
-//   }
-//   // Game.pointsC();
-// };
-//
-// // OBAMA
-//
-// Game.SequenceObama = function() {
-//   for (var i = 0; i < Game.sequenceLengthObama; i++) {
-//     Game.sequenceO.push(Game.randomSequenceNumberObama());
-//   }
-//   console.log(Game.sequenceO);
-//   Game.obama();
-// };
-//
-// Game.randomSequenceNumberObama = function() {
-//   return Math.round(Math.random() * (Game.gridBase * Game.gridHeight));
-// };
-//
-// Game.obama = function() {
-//   var squares = document.getElementsByTagName('li');
-//   for (var i = 0; i < Game.sequenceO.length; i++) {
-//     squares[Game.sequenceO[i]].className = 'obama';
-//   }
-//   // Game.pointsO();
-// };
+// CLINTON
+
+Game.SequenceClinton = function() {
+  for (var i = 0; i < Game.sequenceLengthClinton; i++) {
+    Game.sequenceC.push(Game.randomSequenceNumberClinton());
+  }
+  console.log(Game.sequenceC);
+  Game.clinton();
+};
+
+Game.randomSequenceNumberClinton = function() {
+  return Math.round(Math.random() * (Game.gridBase * Game.gridHeight));
+};
+
+Game.clinton = function() {
+  var squares = document.getElementsByTagName('li');
+  for (var i = 0; i < Game.sequenceC.length; i++) {
+    squares[Game.sequenceC[i]].className = 'clinton';
+  }
+  Game.pointsC();
+};
+
+Game.pointsC = function(){
+  var pointsC = document.getElementsByClassName('clinton');
+  for (var i = 0; i < pointsC.length; i++) {
+    pointsC[i].addEventListener('click', Game.earnPointsC);
+  }
+};
+
+Game.earnPointsC = function () {
+  Game.score.innerHTML = parseInt(Game.score.innerHTML) - 10;
+};
+
+
+// OBAMA
+
+Game.SequenceObama = function() {
+  for (var i = 0; i < Game.sequenceLengthObama; i++) {
+    Game.sequenceO.push(Game.randomSequenceNumberObama());
+  }
+  console.log(Game.sequenceO);
+  Game.obama();
+};
+
+Game.randomSequenceNumberObama = function() {
+  return Math.round(Math.random() * (Game.gridBase * Game.gridHeight));
+};
+
+Game.obama = function() {
+  var squares = document.getElementsByTagName('li');
+  for (var i = 0; i < Game.sequenceO.length; i++) {
+    squares[Game.sequenceO[i]].className = 'obama';
+  }
+  Game.pointsO();
+};
+
+Game.pointsO = function(){
+  var pointsO = document.getElementsByClassName('obama');
+  for (var i = 0; i < pointsO.length; i++) {
+    pointsO[i].addEventListener('click', Game.earnPointsO);
+  }
+};
+
+Game.earnPointsO = function () {
+  Game.lives.innerHTML = parseInt(Game.lives.innerHTML) - 1;
+};
 
 document.addEventListener('DOMContentLoaded', Game.start);
 // find out why putting this at the top prevents it from running correctly
