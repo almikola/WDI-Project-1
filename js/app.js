@@ -12,10 +12,17 @@ Game.sequenceO                  = [];
 Game.sequenceLengthObama        = 2;
 
 
-Game.start = function (){
-  Game.createGrid();
 
+Game.start = function (){
+  Game.score = document.getElementById('score');
+  Game.score.innerHTML = 'Score: ' + 0;
+  Game.lives = document.getElementById('lives');
+  Game.lives.innerHTML = 'Lives: '+ 3;
+  Game.createGrid();
 };
+
+
+
 
 Game.createGrid = function () {
   var body = document.getElementsByTagName('main')[0];
@@ -64,7 +71,7 @@ Game.pointsT = function(){
 };
 
 Game.earnPointsT = function () {
-  
+
 };
 
 // // CLINTON
