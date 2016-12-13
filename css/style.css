@@ -1,6 +1,6 @@
 body {
-  background-color: #002663;
-  color: white;
+  background-color: white;
+  color: #002663;
   text-align: center;
 }
 
@@ -30,14 +30,16 @@ video#bgvid {
 }
 
 h1    {
-  font-size: 50px;
+  font-size: 80px;
   margin-bottom: 0;
+  margin-top: 15px;
 }
 
 #heading h2 {
   display: inline;
   padding: 5px;
-  background: #002663;
+  background: white;
+  color: #B22234;
 }
 
 button {
@@ -50,7 +52,10 @@ button {
   font-size: 15px;
   background:#B22234;
   padding: 10px 20px 10px 20px;
+}
 
+button:hover {
+  background: #002663;
 }
 
 main {
@@ -65,12 +70,13 @@ ul {
   padding: 0;
   width: 600px;
   height: 400px;
+  border: 2px solid white;
 }
 
 li {
   list-style-type: none;
   float: left;
-  border: 1px solid white;
+  border: 1.5px solid white;
   box-sizing: border-box;
 }
 
