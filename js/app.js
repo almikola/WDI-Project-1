@@ -12,6 +12,7 @@ Game.soundbitesO                = ['success'];
 Game.seconds                    = 1000;
 
 Game.setup = function() {
+  alert('Welcome to Whack-A-Trump! Whack Trump to win points! Lose points if you whack Hillary AND lose LIVES if you whack Barack! Happy whacking!');
   Game.level = document.getElementById('level');
   Game.level.innerHTML = 1;
   Game.score = document.getElementById('score');
@@ -61,17 +62,17 @@ Game.checkForPoints = function() {
   if ($(this).attr('class') === 'trump') {
     Game.score.innerHTML = parseInt(Game.score.innerHTML) + 10;
     var fileNameT =  Game.soundbitesT[Math.floor(Math.random()*Game.soundbitesT.length)];
-    new Audio('file:///Users/almikola/development/WDI-Project-1/soundbites/' + fileNameT + '.mp3').play();
+    new Audio('../images/soundbites/' + fileNameT + '.mp3').play();
   } else if ($(this).attr('class') === 'clinton') {
     Game.score.innerHTML = parseInt(Game.score.innerHTML) - 10;
     var fileNameH = Game.soundbitesH[Math.floor(Math.random()*Game.soundbitesH.length)];
-    new Audio('file:///Users/almikola/development/WDI-Project-1/soundbites/' + fileNameH + '.mp3').play();
+    new Audio('../images/soundbites/' + fileNameH + '.mp3').play();
   } else if ($(this).attr('class') === 'obama') {
     Game.lives.innerHTML = parseInt(Game.lives.innerHTML) - 1;
     Game.counter+=5;
     // Game.checkLives();
     var fileNameO = Game.soundbitesO[Math.floor(Math.random()*Game.soundbitesO.length)];
-    new Audio('file:///Users/almikola/development/WDI-Project-1/soundbites/' + fileNameO + '.mp3').play();
+    new Audio('../images/soundbites/' + fileNameO + '.mp3').play();
   }
 };
 
