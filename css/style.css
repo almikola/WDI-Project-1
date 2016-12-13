@@ -17,7 +17,7 @@ video#bgvid {
   -moz-transform: translateX(-50%) translateY(-50%);
   -webkit-transform: translateX(-50%) translateY(-50%);
   transform: translateX(-50%) translateY(-50%);
-  background: url("file:///Users/almikola/development/WDI-Project-1/giphy.gif") no-repeat;
+  background: url("./../images/giphy.gif") no-repeat;
   background-size: cover;
 }
 
@@ -81,16 +81,16 @@ li {
 }
 
 .trump {
-  background: url("file:///Users/almikola/development/WDI-Project-1/images/donaldTrump.png");
+  background: url("./../images/donaldTrump.png");
   background-repeat: no-repeat;
 }
 
 .clinton {
-  background: url("file:///Users/almikola/development/WDI-Project-1/images/hillaryClinton.png");
+  background: url("./../images/hillaryClinton.png");
   background-repeat: no-repeat;
 }
 
 .obama {
-  background: url("file:///Users/almikola/development/WDI-Project-1/images/barackObama.png");
+  background: url("./../images/barackObama.png");
   background-repeat: no-repeat;
 }
