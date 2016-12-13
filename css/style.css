@@ -27,6 +27,11 @@ video#bgvid {
   font-family: 'PT Sans Narrow', sans-serif;
 }
 
+div .directions {
+  float: left;
+  text-align: center;
+}
+
 h1    {
   font-size: 80px;
   margin-bottom: 0;
