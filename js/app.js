@@ -61,7 +61,7 @@ Game.checkForPoints = function() {
   if ($(this).attr('class') === 'trump') {
     Game.score.innerHTML = parseInt(Game.score.innerHTML) + 10;
     var fileNameT =  Game.soundbitesT[Math.floor(Math.random()*Game.soundbitesT.length)];
-    new Audio('file:///Users/almikola/development/WDI-Project-1/soundbites/' + fileNameT + '.mp3').play();
+    new Audio('file:///Users/almikola/development/WDI-Project-1/oundbites/' + fileNameT + '.mp3').play();
   } else if ($(this).attr('class') === 'clinton') {
     Game.score.innerHTML = parseInt(Game.score.innerHTML) - 10;
     var fileNameH = Game.soundbitesH[Math.floor(Math.random()*Game.soundbitesH.length)];
