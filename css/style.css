@@ -2,11 +2,29 @@ body {
   background-color: #002663;
   color: white;
   text-align: center;
-  background: url("file:///Users/almikola/development/WDI-Project-1/images/usflag.jpg");
 }
 
+video#bgvid {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -100;
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  background: url("file:///Users/almikola/development/WDI-Project-1/giphy.gif") no-repeat;
+  background-size: cover;
+}
+
+
+
 #heading {
-  width: 800px;
+  width: 600px;
   margin: 0 auto;
   font-family: 'PT Sans Narrow', sans-serif;
 }
@@ -38,15 +56,15 @@ button {
 main {
   margin: 0 auto;
   margin-top: 25px;
-  width: 800px;
-  height: 600px;
+  width: 600px;
+  height: 400px;
 }
 
 ul {
   margin: 0 auto;
   padding: 0;
-  width: 800px;
-  height: 600px;
+  width: 600px;
+  height: 400px;
 }
 
 li {
