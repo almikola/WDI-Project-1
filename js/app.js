@@ -63,6 +63,12 @@ Game.setTimer = function() {
       $('li').removeClass('trump clinton obama');
       new Audio('./soundbites/maga.wav').play();
     }
+    if (parseInt(Game.score.innerHTML) < 0) {
+      alert('Sorry, you lost!');
+      clearInterval(interval);
+      $('li').removeClass('trump clinton obama');
+      new Audio('./soundbites/maga.wav').play();
+    }
   }, Game.seconds);
 };
 
