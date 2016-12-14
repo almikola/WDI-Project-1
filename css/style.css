@@ -55,6 +55,10 @@ button:hover {
   background: #002663;
 }
 
+span {
+  color: #B22234;
+}
+
 main {
   margin: 0 auto;
   margin-top: 25px;
